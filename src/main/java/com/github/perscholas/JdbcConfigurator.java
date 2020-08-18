@@ -1,6 +1,7 @@
 package com.github.perscholas;
 
 import com.github.perscholas.model.Person;
+import com.github.perscholas.model.PersonBuilder;
 import com.github.perscholas.utils.DirectoryReference;
 import com.github.perscholas.utils.FileReader;
 import org.mariadb.jdbc.Driver;
@@ -35,7 +36,7 @@ public class JdbcConfigurator {
     }
 
     public void initialize() {
-        PersonDao.PRODUCTION.create(new Person());
+        PersonDao.PRODUCTION.create(new PersonBuilder().setEmail("email").setName("Christopher").setPassword("Password").build());
         scriptFiles.forEach(this::executeSqlFile);
     }
 

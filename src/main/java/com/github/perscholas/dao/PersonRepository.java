@@ -29,7 +29,7 @@ public class PersonRepository extends AbstractRepository<Long, Person> {
 
     @Override
     public List<Person> findAll() {
-        String query = "SELECT * FROM Person;";
+        String query = "SELECT * FROM person;";
         ResultSet resultSet = getDatabaseConnection().executeQuery(query);
         return new PersonOrm(resultSet).toList();
     }
@@ -50,7 +50,7 @@ public class PersonRepository extends AbstractRepository<Long, Person> {
     @Override
     public Person delete(Person entity) {
         Long id = entity.getId();
-        String statement = "DELETE FROM Person WHERE id = " + id + ";";
+        String statement = "DELETE FROM person WHERE id = " + id + ";";
         Person person = this.findById(id).get();
         getDatabaseConnection().executeStatement(statement);
         return person;

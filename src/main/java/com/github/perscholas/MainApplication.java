@@ -6,8 +6,8 @@ package com.github.perscholas;
 public class MainApplication {
     public static void main(String[] args) {
         JdbcConfigurator configurator = new JdbcConfigurator(DatabaseConnection.PRODUCTION_DATABASE);
-        configurator.appendSqlScript("production.person_create-table.sql");
-//        configurator.appendSqlScript("production.person_populate-table.sql");
+//        configurator.appendSqlScript("src/main/resources/person.create-table.sql");
+//        configurator.appendSqlScript("src/main/resources/production.person_populate-table.sql");
         configurator.initialize();
         Runnable applicationRunner = new ApplicationRunner();
         applicationRunner.run();

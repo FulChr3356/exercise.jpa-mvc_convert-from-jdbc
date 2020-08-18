@@ -10,15 +10,15 @@ import java.sql.*;
  */
 public enum DatabaseConnection implements DatabaseConnectionInterface {
     PRODUCTION_DATABASE(new ConnectionBuilder()
-            .setUser("root")
-            .setPassword("")
+            .setUser("admin")
+            .setPassword("password")
             .setPort(3306)
             .setDatabaseVendor("mariadb")
             .setHost("127.0.0.1")),
 
     TESTING_DATABASE(new ConnectionBuilder()
-            .setUser("root")
-            .setPassword("")
+            .setUser("admin")
+            .setPassword("password")
             .setPort(3306)
             .setDatabaseVendor("mariadb")
             .setHost("127.0.0.1"));

@@ -1,4 +1,4 @@
-CREATE TABLE production_database.person(
+CREATE TABLE person(
     id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(50) NOT NULL,
     name TEXT NOT NULL,

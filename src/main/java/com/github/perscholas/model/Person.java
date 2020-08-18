@@ -1,12 +1,11 @@
 package com.github.perscholas.model;
-
 import javax.persistence.*;
 
 /**
  * Created by leon on 8/13/2020.
  */ // TODO - Implement `EntityInterface<Long>`
 @Entity
-@Table(name = "person")
+@Table(name = "person", schema = "production_database")
 public class Person implements EntityInterface<Long> {
     @Id
     @Column(name = "id")
